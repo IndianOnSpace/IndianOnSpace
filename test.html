@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Danfo:ELSH@0..100&family=Jacquard+12&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Danfo:ELSH@0..100&family=Jacquard+12&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Responsive avec Image de Fond et Musique</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://sf2.cnetfrance.fr/wp-content/uploads/cnet/2023/05/voie-lactee-1200-750x410.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Vue pleine hauteur */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .header-text {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Danfo', sans-serif;
+            font-size: 72px;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-text span {
+            display: inline-block;
+            animation: wave 1.5s infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .header-text span:nth-child(1) { animation-delay: 0s; }
+        .header-text span:nth-child(2) { animation-delay: 0.1s; }
+        .header-text span:nth-child(3) { animation-delay: 0.2s; }
+        .header-text span:nth-child(4) { animation-delay: 0.3s; }
+        .header-text span:nth-child(5) { animation-delay: 0.4s; }
+        .header-text span:nth-child(6) { animation-delay: 0.5s; }
+        .header-text span:nth-child(7) { animation-delay: 0.6s; }
+        .header-text span:nth-child(8) { animation-delay: 0.7s; }
+        .header-text span:nth-child(9) { animation-delay: 0.8s; }
+        .header-text span:nth-child(10) { animation-delay: 0.9s; }
+        .header-text span:nth-child(11) { animation-delay: 1s; }
+        .header-text span:nth-child(12) { animation-delay: 1.1s; }
+        .header-text span:nth-child(13) { animation-delay: 1.2s; }
+        .header-text span:nth-child(14) { animation-delay: 1.3s; }
+
+        .content {
+            background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le texte */
+            padding: 20px;
+            border-radius: 10px;
+            position: relative; /* Pour positionner les GIFs par rapport à .content */
+        }
+
+        .gif1 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 700px; /* Ajustez la taille du GIF selon vos besoins */
+            height: auto;
+        }
+
+        .gif2 {
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 150px; /* Ajustez la taille du GIF selon vos besoins */
+            height: auto;
+        }
+
+        .gif3 {
+            top: 50%;
+            left: 90%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 150px; /* Ajustez la taille du GIF selon vos besoins */
+            height: auto;
+        }
+
+	.footer-text {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Kanit', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: white;
+        }
+
+        /* Media queries pour différentes tailles d'écran */
+        @media (max-width: 768px) {
+            .header-text {
+                font-size: 1.5em;
+            }
+            .content p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-text {
+                font-size: 1.2em;
+            }
+            .content p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://media.giphy.com/media/MZFeka71u3xW1YGwya/giphy.gif" alt="Gif 1" class="gif1">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXAyNXdnZzZycXF1ejk1emVkZ3htcW9ybWF2MWczaHlvcTVleTg1MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/W5teMDfHaMt6IpkPsK/giphy.gif" alt="Gif 2" class="gif2">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXAyNXdnZzZycXF1ejk1emVkZ3htcW9ybWF2MWczaHlvcTVleTg1MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/W5teMDfHaMt6IpkPsK/giphy.gif" alt="Gif 3" class="gif3">
+    <div class="header-text">
+        <span>I</span>
+        <span>n</span>
+        <span>d</span>
+        <span>i</span>
+        <span>a</span>
+        <span>&nbsp;</span>
+        <span>o</span>
+        <span>n</span>
+        <span>&nbsp;</span>
+        <span>S</span>
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>e</span>
+    </div>
+    <div class="footer-text">
+        fight against D. Trump mooning w/ indian mooning <br> telegram : https://t.me/+E3SNmsVW6gQ0ZWU0 twitter : https://x.com/India2themoon 
+    </div>
+</body>
+</html>
